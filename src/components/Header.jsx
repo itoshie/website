@@ -1,14 +1,14 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/itoshie_logo.png";
+import itoshie_logo from "../assets/images/itoshie_logo.webp";
 
 const Header = () => {
   return (
     <header className="header">
       {/* Left Logo */}
       <div className="logo">
-        <Link to="/"><img src={Logo} alt="logo" /></Link>
+        <Link to="/"><img src={itoshie_logo} alt="logo" /></Link>
 
       </div>
 
