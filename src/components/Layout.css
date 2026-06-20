@@ -1,0 +1,8 @@
+.container {
+    height: calc(100vh - 16px);
+    /* full screen */
+    overflow: hidden;
+    /* prevent outer scroll */
+    display: flex;
+    flex-direction: column;
+}
