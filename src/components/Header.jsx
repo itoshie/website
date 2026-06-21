@@ -14,7 +14,7 @@ const Header = () => {
 
       {/* Center Menu */}
       <nav className="nav">
-        <Link to="/">PRODUCTS</Link>
+        {/* <Link to="/">PRODUCTS</Link> */}
         <Link to="/">ABOUT US</Link>
       </nav>
     </header>

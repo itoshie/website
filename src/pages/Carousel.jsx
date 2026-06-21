@@ -5,31 +5,31 @@ import slide3 from "../assets/images/home_slide3.webp";
 import "./Carousel.css";
 
 const slides = [
-  {
-    image: slide1,
-    text: "Welcome to Our Website"
-  },
+  // {
+  //   image: slide1,
+  //   text: "Welcome to itoshie"
+  // },
   {
     image: slide2,
     text: "We Build Amazing Things"
   },
-  {
-    image: slide3,
-    text: "Start Your Journey Today"
-  }
+  // {
+  //   image: slide3,
+  //   text: "Start Your Journey Today"
+  // }
 ];
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(prev => (prev + 1) % slides.length);
-    }, 12000);
+  // // Auto slide
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent(prev => (prev + 1) % slides.length);
+  //   }, 12000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const nextSlide = () => {
     setCurrent((current + 1) % slides.length);
@@ -47,9 +47,12 @@ const Carousel = () => {
           className={index === current ? "slide active" : "slide"}
         >
           <img src={slide.image} alt="slide" />
-          <div className="overlay">
-            <h2>{slide.text}</h2>
-          </div>
+          {
+            index !== 0 ? (<div className={`overlay${index + 1}`}>
+              <h2>{slide.text} coming soon...</h2>
+            </div>) : <React.Fragment></React.Fragment>
+          }
+
         </div>
       ))}
 

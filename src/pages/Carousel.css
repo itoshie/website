@@ -23,7 +23,7 @@
   position: relative;
 }
 
-.overlay {
+.overlay1 {
   position: absolute;
   bottom: 30%;
   left: 50%;
@@ -32,7 +32,27 @@
   text-align: center;
 }
 
-.overlay h2 {
+.overlay2 {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay3 {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay1,
+.overlay2,
+.overlay3 h2 {
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
@@ -40,11 +60,12 @@
 }
 
 /* Buttons */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -69,4 +90,23 @@
   .overlay h2 {
     font-size: 1.2rem;
   }
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
 }
