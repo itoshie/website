@@ -46,16 +46,19 @@ const Carousel = () => {
           key={index}
           className={index === current ? "slide active" : "slide"}
         >
-          <img src={slide.image} alt="slide" />
-          {
-            index !== 0 ? (<div className={`overlay${index + 1}`}>
-              <h2>{slide.text} coming soon...</h2>
-            </div>) : <React.Fragment></React.Fragment>
-          }
-
+          <div className="slide-container">
+            <div className="slide-image">
+              <img src={slide.image} alt="slide" />
+            </div>
+            <div className="slide-text">
+              <div className="slide-content">
+                <h2>{slide.text}</h2>
+                <p>Coming soon...</p>
+              </div>
+            </div>
+          </div>
         </div>
       ))}
-
     </div>
   );
 };
